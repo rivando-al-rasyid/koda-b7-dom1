@@ -1,0 +1,19 @@
+.traffic-box {
+    width: 75px;
+    height: 175px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+}
+.lampu {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #444; /* Off color */
+}
+/* Active colors */
+.lampu.red { background-color: red; }
+.lampu.yellow { background-color: yellow; }
+.lampu.green { background-color: green; }

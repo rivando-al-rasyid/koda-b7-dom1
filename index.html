@@ -25,14 +25,27 @@
 
 <body>
   <!-- your content here... -->
-   <input type="number" id='suhu' placeholder='nilai suhu'>
+   <input type="number" id='suhu' placeholder='nilai suhu C/F'>
+    <p class='hasil' id='hasil'></p>
 
     <button onclick='celciusToFarnheit()' >Celcius ke farenheit</button>
-    <p class='hasil' id='hasil'></p>
     <button onclick='farnheitToCelcius()' >farenheit ke Celcius</button>
 
+    <div class='traffic-box'>
+                  <div class="lampu" id="hijau"></div>
+            <div class="lampu" id="kuning"></div>
+                        <div class="lampu" id="merah"></div>
 
-  <script src="./js/main.js" defer></script>
+
+    </div>
+
+  <button onclick="stop()">Start Auto</button>
+
+
+
+  <script src="./js/minitask1.js" defer></script>
+  <script src="./js/minitask2.js" defer></script>
+
 </body>
 
 </html>
