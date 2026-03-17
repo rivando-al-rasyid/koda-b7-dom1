@@ -17,3 +17,104 @@
 .lampu.red { background-color: red; }
 .lampu.yellow { background-color: yellow; }
 .lampu.green { background-color: green; }
+
+/* style.css */
+
+/* Pengaturan Dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Styling Container Form */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Label dan Judul */
+label {
+    font-weight: 600;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+p {
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Input Teks, Angka, dan Select */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #007bff;
+}
+
+/* Radio dan Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Tombol-tombol */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    width: 70%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333;
+    width: 25%;
+    margin-right: 5%;
+}
+
+button[type="reset"]:hover {
+    background-color: #d1d1d1;
+}
+
+button:active {
+    transform: scale(0.98);
+}
