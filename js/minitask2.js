@@ -1,11 +1,8 @@
 let timer = 0;
 
 const merah = document.getElementById('merah');
-console.log(merah)
 const kuning = document.getElementById('kuning');
-console.log(kuning)
 const hijau = document.getElementById('hijau');
-console.log(hijau)
 
 
 
