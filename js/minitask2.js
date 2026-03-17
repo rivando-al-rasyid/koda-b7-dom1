@@ -4,9 +4,6 @@ const merah = document.getElementById('merah');
 const kuning = document.getElementById('kuning');
 const hijau = document.getElementById('hijau');
 
-
-
-
 function reset() {
   merah.classList.remove('red');
   kuning.classList.remove('yellow');
@@ -30,4 +27,3 @@ function start() {
   hijau.classList.add('green');
   timer = setTimeout(stop, 3000);
 }
-
