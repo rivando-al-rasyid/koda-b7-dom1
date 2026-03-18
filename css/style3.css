@@ -1,0 +1,94 @@
+.calbody {
+  display: grid;
+  /* 7 columns for the desktop scientific view */
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  background-color: #202124;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.cal-screen {
+  grid-column: span 7;
+  background-color: #202124;
+  color: #e8eaed;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #3c4043;
+  border-radius: 8px;
+}
+
+.screen-history {
+  font-size: 0.9rem;
+  color: #9aa0a6;
+  margin-bottom: 5px;
+}
+
+.screen-current {
+  font-size: 2rem;
+}
+
+/* Base button style (keep your existing ones, but ensure they center well) */
+.calbody div:not(.cal-screen) {
+  padding: 15px 0;
+  border-radius: 50px;
+  background-color: #3c4043;
+  color: #e8eaed;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* --- Media Query for Mobile --- */
+@media (max-width: 480px) {
+  .calbody {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for mobile */
+    max-width: 100%;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .cal-screen {
+    grid-column: span 4; /* Span full width of the new 4-column grid */
+    padding: 15px;
+  }
+
+  /* Force scientific buttons to the bottom */
+  .btn-sci {
+    display: flex; /* Show them again */
+    order: 2;      /* Move to the end of the flex/grid order */
+    grid-column: span 1; /* Each takes 1 of the 4 columns */
+    font-size: 0.85rem;
+    padding: 10px 0;
+    background-color: #303134; /* Slightly darker to distinguish from numbers */
+  }
+
+  /* Ensure standard buttons stay on top */
+  .btn-number, .btn-op, .btn-equal {
+    order: 1;
+    padding: 18px 0;
+  }
+}
+
+.btn-double {
+  grid-column: span 2 !important;
+}
+
+/* Optional: Ensure the text stays centered even when wide */
+.btn-sci {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calbody .btn-equal {
+  background-color: #1a73e8 !important;
+  color: #ffffff !important;
+}
+
+.calbody .btn-equal:hover {
+  background-color: #1558b0 !important;
+}

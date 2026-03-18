@@ -19,13 +19,25 @@
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="./css/style2.css">
+  <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
   <!-- your content here... -->
-  <script src="./js/minitask4.js" defer></script>
+   <input type="number" id='suhu' placeholder='nilai suhu C/F'>
+    <p class='hasil' id='hasil'></p>
+
+    <button onclick='celciusToFarnheit()' >Celcius ke farenheit</button>
+    <button onclick='farnheitToCelcius()' >farenheit ke Celcius</button>
+
+
+  <button onclick="stop()">Start Auto</button>
+
+
+
+  <script src="./js/minitask1.js" defer></script>
+
 </body>
 
 </html>

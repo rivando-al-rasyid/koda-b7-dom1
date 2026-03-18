@@ -1,94 +1,98 @@
-.calbody {
-  display: grid;
-  /* 7 columns for the desktop scientific view */
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-  background-color: #202124;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 8px;
+/* Pengaturan Dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.cal-screen {
-  grid-column: span 7;
-  background-color: #202124;
-  color: #e8eaed;
-  text-align: right;
-  padding: 20px;
-  margin-bottom: 10px;
-  border: 1px solid #3c4043;
-  border-radius: 8px;
+/* Styling Container Form */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
 }
 
-.screen-history {
-  font-size: 0.9rem;
-  color: #9aa0a6;
-  margin-bottom: 5px;
+/* Label dan Judul */
+label {
+    font-weight: 600;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
-.screen-current {
-  font-size: 2rem;
+p {
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-/* Base button style (keep your existing ones, but ensure they center well) */
-.calbody div:not(.cal-screen) {
-  padding: 15px 0;
-  border-radius: 50px;
-  background-color: #3c4043;
-  color: #e8eaed;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  cursor: pointer;
-}
-
-/* --- Media Query for Mobile --- */
-@media (max-width: 480px) {
-  .calbody {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for mobile */
-    max-width: 100%;
+/* Input Teks, Angka, dan Select */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
     padding: 10px;
-    gap: 8px;
-  }
-
-  .cal-screen {
-    grid-column: span 4; /* Span full width of the new 4-column grid */
-    padding: 15px;
-  }
-
-  /* Force scientific buttons to the bottom */
-  .btn-sci {
-    display: flex; /* Show them again */
-    order: 2;      /* Move to the end of the flex/grid order */
-    grid-column: span 1; /* Each takes 1 of the 4 columns */
-    font-size: 0.85rem;
-    padding: 10px 0;
-    background-color: #303134; /* Slightly darker to distinguish from numbers */
-  }
-
-  /* Ensure standard buttons stay on top */
-  .btn-number, .btn-op, .btn-equal {
-    order: 1;
-    padding: 18px 0;
-  }
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-.btn-double {
-  grid-column: span 2 !important;
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #007bff;
 }
 
-/* Optional: Ensure the text stays centered even when wide */
-.btn-sci {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Radio dan Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
 }
 
-.calbody .btn-equal {
-  background-color: #1a73e8 !important;
-  color: #ffffff !important;
+/* Tombol-tombol */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 20px;
 }
 
-.calbody .btn-equal:hover {
-  background-color: #1558b0 !important;
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    width: 70%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333;
+    width: 25%;
+    margin-right: 5%;
+}
+
+button[type="reset"]:hover {
+    background-color: #d1d1d1;
+}
+
+button:active {
+    transform: scale(0.98);
 }
